@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "Taller Doctorado HTTP/MQTT",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -25,
+      "left": -140,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -120,
+      "left": 135,
+      "attrs": {
+        "temperature": "24",
+        "humidity": "60"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:3V3",
+      "dht1:VCC",
+      "red",
+      [
+        "h0",
+        "v-20"
+      ]
+    ],
+    [
+      "esp:GND.1",
+      "dht1:GND",
+      "black",
+      [
+        "h0",
+        "v40"
+      ]
+    ],
+    [
+      "esp:D15",
+      "dht1:SDA",
+      "green",
+      [
+        "h0",
+        "v-5"
+      ]
+    ]
+  ],
+  "serialMonitor": {
+    "display": "always"
+  },
+  "dependencies": {}
+}
